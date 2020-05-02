@@ -14,8 +14,7 @@ func init():
 		"collider": [
 			0,
 			0
-		],
-		"healthbar": Vector2(-77.211, -150.236)
+		]
 	}
 
 	hitFrame = 20

@@ -9,6 +9,8 @@ var maxHealth: float = 100
 var health: float = 100
 var dead = false
 
+
+
 func set_health(hp):
 	health = hp
 	maxHealth = hp

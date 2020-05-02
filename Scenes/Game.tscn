@@ -214,6 +214,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 84 ), ExtResource( 94 ), ExtResource( 85 ), ExtResource( 108 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 106 ), ExtResource( 109 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 141 ), ExtResource( 147 ), ExtResource( 116 ), ExtResource( 136 ), ExtResource( 118 ), ExtResource( 121 ), ExtResource( 134 ), ExtResource( 117 ), ExtResource( 125 ), ExtResource( 132 ) ],
+"loop": false,
+"name": "clubman_die",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 71 ), ExtResource( 79 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 63 ), ExtResource( 66 ), ExtResource( 82 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 68 ), ExtResource( 67 ), ExtResource( 72 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 76 ), ExtResource( 78 ), ExtResource( 99 ), ExtResource( 107 ), ExtResource( 88 ), ExtResource( 97 ), ExtResource( 104 ), ExtResource( 110 ), ExtResource( 90 ), ExtResource( 89 ), ExtResource( 96 ), ExtResource( 98 ), ExtResource( 86 ), ExtResource( 95 ), ExtResource( 115 ), ExtResource( 91 ), ExtResource( 103 ), ExtResource( 87 ), ExtResource( 83 ), ExtResource( 105 ) ],
 "loop": false,
 "name": "clubman_hit",
@@ -232,11 +237,6 @@ animations = [ {
 "frames": [ ExtResource( 130 ), ExtResource( 124 ), ExtResource( 140 ), ExtResource( 142 ), ExtResource( 122 ), ExtResource( 138 ), ExtResource( 120 ), ExtResource( 135 ), ExtResource( 123 ), ExtResource( 133 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 143 ), ExtResource( 119 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 131 ), ExtResource( 146 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 179 ), ExtResource( 171 ), ExtResource( 160 ), ExtResource( 156 ), ExtResource( 169 ), ExtResource( 163 ), ExtResource( 177 ), ExtResource( 159 ), ExtResource( 157 ), ExtResource( 170 ), ExtResource( 162 ), ExtResource( 173 ), ExtResource( 149 ), ExtResource( 174 ), ExtResource( 172 ), ExtResource( 152 ), ExtResource( 175 ), ExtResource( 168 ), ExtResource( 161 ), ExtResource( 151 ), ExtResource( 176 ) ],
 "loop": true,
 "name": "clubman_walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 84 ), ExtResource( 94 ), ExtResource( 85 ), ExtResource( 108 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 106 ), ExtResource( 109 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 141 ), ExtResource( 147 ), ExtResource( 116 ), ExtResource( 136 ), ExtResource( 118 ), ExtResource( 121 ), ExtResource( 134 ), ExtResource( 117 ), ExtResource( 125 ), ExtResource( 132 ) ],
-"loop": false,
-"name": "clubman_die",
 "speed": 5.0
 } ]
 
@@ -291,10 +291,9 @@ shape = SubResource( 2 )
 
 [node name="Gui" type="Control" parent="clubman"]
 modulate = Color( 0.611765, 0, 0, 1 )
-margin_left = -77.211
-margin_top = -150.236
-margin_right = -57.211
-margin_bottom = -147.236
+margin_top = -155.115
+margin_right = 20.0
+margin_bottom = -152.115
 rect_scale = Vector2( 4, 4 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -41,7 +41,7 @@ var deb = true
 var hitDeb = true
 var hasNotHitDeb = true
 var currentTarget
-
+var stuck = false
 
 func _process(_delta):
 	if myName == 'base' or !setupDone:
@@ -49,15 +49,15 @@ func _process(_delta):
 		
 
 	# offset så spritesne passer
-	animSprite.offset.x = offsets[ animSprite.animation.split('_')[1] ] [str(direction)].x * direction
-	animSprite.offset.y = offsets[ animSprite.animation.split('_')[1] ] [str(direction)].y
+	animSprite.offset.x = offsets[ animSprite.animation.split('_')[1] ].x * direction
+	animSprite.offset.y = offsets[ animSprite.animation.split('_')[1] ].y
 
 
 	if get_node(".").dead:
 		return
 
 	# hit animationen er ikke sat til at loope
-	if !hitDeb:
+	if !hitDeb and !stuck:
 		var amount_of_frames = animSprite.frames.get_frame_count(animSprite.animation) - 1
 		if animSprite.frame == amount_of_frames:
 			hitDeb = true
@@ -66,11 +66,15 @@ func _process(_delta):
 			currentTarget.takeDamage(myName)
 			hasNotHitDeb = false
 
+	if !test_move(transform, Vector2(direction * 1, 0) ):
+		stuck = true
+
+
 	var collisionObject = move_and_collide(Vector2(direction * 1, 0))
 	if collisionObject != null and deb:
 		#deb = false
 
-		if hitDeb:
+		if hitDeb and !stuck:
 			animSprite.animation = str(myName, '_idle')
 
 		var target = collisionObject.collider
@@ -82,7 +86,7 @@ func _process(_delta):
 		if target == null or sprite == null:
 			return
 
-		if sprite.flip_h != get_node("AnimatedSprite").flip_h && hitDeb:
+		if sprite.flip_h != get_node("AnimatedSprite").flip_h && hitDeb and !stuck:
 			# det betyder at vi er stødt ind i en fjende
 			animSprite.animation = str(myName, '_hit')
 			animSprite.frame = 0 # for en sikkerhedsskyld sørger jeg for at animationen starter helt fra begyndelsen
@@ -91,7 +95,7 @@ func _process(_delta):
 			currentTarget = target
 	else:
 		# hvis den ikke kolliderer med noget, skal den bare køre gå animationen.
-		if hitDeb:
+		if hitDeb and !stuck:
 			animSprite.animation = str(myName, '_walk')
 
 	pass
