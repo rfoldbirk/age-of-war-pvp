@@ -12,7 +12,7 @@ func _ready():
 	get_node("clubman").get_node("CollisionShape2D").disabled = true
 
 	var second_base = get_node("base").duplicate()
-	second_base.position.x = 0
+	second_base.position.x = 1000
 	second_base.dir = -1
 	add_child(second_base)
 	second_base.init()

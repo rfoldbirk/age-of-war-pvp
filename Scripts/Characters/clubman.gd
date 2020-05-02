@@ -7,26 +7,15 @@ func init():
 	myName = "clubman"
 	direction = dir
 	offsets = {
-		"idle": {
-			"1": Vector2(0, 0), 
-			"-1": Vector2(0, 0),
-		},
-		"hit": {
-			"1": Vector2(-3.815, -7), 
-			"-1": Vector2(1.753, -7),
-		},
-		"walk": {
-			"1": Vector2(2.4, 0), 
-			"-1": Vector2(2.4, 0),
-		},
-		"die": {
-			"1": Vector2(0, 0), 
-			"-1": Vector2(0, 0),
-		},
+		"idle": Vector2(0, 0),
+		"hit": Vector2(11.69, -39.92),
+		"walk": Vector2(-12.952, 0),
+		"die": Vector2(-103.414, 270.302),
 		"collider": [
-			-6.154,
-			5.437
-		]
+			0,
+			0
+		],
+		"healthbar": Vector2(-77.211, -150.236)
 	}
 
 	hitFrame = 20

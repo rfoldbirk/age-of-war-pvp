@@ -44,12 +44,17 @@ var currentTarget
 
 
 func _process(_delta):
-	if myName == 'base' or !setupDone or get_node(".").dead:
+	if myName == 'base' or !setupDone:
 		return
 		
 
 	# offset så spritesne passer
-	animSprite.offset = offsets[ animSprite.animation.split('_')[1] ] [str(direction)]
+	animSprite.offset.x = offsets[ animSprite.animation.split('_')[1] ] [str(direction)].x * direction
+	animSprite.offset.y = offsets[ animSprite.animation.split('_')[1] ] [str(direction)].y
+
+
+	if get_node(".").dead:
+		return
 
 	# hit animationen er ikke sat til at loope
 	if !hitDeb:
