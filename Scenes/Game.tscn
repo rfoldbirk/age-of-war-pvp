@@ -1,4 +1,4 @@
-[gd_scene load_steps=216 format=2]
+[gd_scene load_steps=350 format=2]
 
 [ext_resource path="res://Assets/Background/background.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/cameraMovement.gd" type="Script" id=2]
@@ -165,7 +165,7 @@
 [ext_resource path="res://Assets/Stone Age/Soldiers/Club Man/walk/28.png" type="Texture" id=163]
 [ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/idle/4.png" type="Texture" id=164]
 [ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/idle/5.png" type="Texture" id=165]
-[ext_resource path="res://Scripts/Characters/base.gd" type="Script" id=166]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/47.png" type="Texture" id=166]
 [ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/idle/10.png" type="Texture" id=167]
 [ext_resource path="res://Assets/Stone Age/Soldiers/Club Man/walk/40.png" type="Texture" id=168]
 [ext_resource path="res://Assets/Stone Age/Soldiers/Club Man/walk/27.png" type="Texture" id=169]
@@ -209,24 +209,148 @@
 [ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/idle/22.png" type="Texture" id=207]
 [ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/idle/33.png" type="Texture" id=208]
 [ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/idle/40.png" type="Texture" id=209]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/28.png" type="Texture" id=210]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/15.png" type="Texture" id=211]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/18.png" type="Texture" id=212]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/2.png" type="Texture" id=213]
 [ext_resource path="res://Scripts/setup.gd" type="Script" id=214]
 [ext_resource path="res://Scripts/Characters/clubman.gd" type="Script" id=215]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/22.png" type="Texture" id=216]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/1.png" type="Texture" id=217]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/10.png" type="Texture" id=218]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/25.png" type="Texture" id=219]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/14.png" type="Texture" id=220]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/23.png" type="Texture" id=221]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/5.png" type="Texture" id=222]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/21.png" type="Texture" id=223]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/4.png" type="Texture" id=224]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/19.png" type="Texture" id=225]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/26.png" type="Texture" id=226]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/27.png" type="Texture" id=227]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/7.png" type="Texture" id=228]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/13.png" type="Texture" id=229]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/11.png" type="Texture" id=230]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/6.png" type="Texture" id=231]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/9.png" type="Texture" id=232]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/12.png" type="Texture" id=233]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/17.png" type="Texture" id=234]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/3.png" type="Texture" id=235]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/8.png" type="Texture" id=236]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/16.png" type="Texture" id=237]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/20.png" type="Texture" id=238]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/24.png" type="Texture" id=239]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/35.png" type="Texture" id=240]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/45.png" type="Texture" id=241]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/41.png" type="Texture" id=242]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/43.png" type="Texture" id=243]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/4.png" type="Texture" id=244]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/32.png" type="Texture" id=245]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/36.png" type="Texture" id=246]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/5.png" type="Texture" id=247]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/1.png" type="Texture" id=248]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/10.png" type="Texture" id=249]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/13.png" type="Texture" id=250]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/8.png" type="Texture" id=251]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/44.png" type="Texture" id=252]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/39.png" type="Texture" id=253]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/40.png" type="Texture" id=254]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/29.png" type="Texture" id=255]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/42.png" type="Texture" id=256]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/6.png" type="Texture" id=257]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/9.png" type="Texture" id=258]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/14.png" type="Texture" id=259]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/15.png" type="Texture" id=260]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/30.png" type="Texture" id=261]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/38.png" type="Texture" id=262]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/3.png" type="Texture" id=263]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/34.png" type="Texture" id=264]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/33.png" type="Texture" id=265]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/7.png" type="Texture" id=266]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/11.png" type="Texture" id=267]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/2.png" type="Texture" id=268]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/31.png" type="Texture" id=269]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/hit/37.png" type="Texture" id=270]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/12.png" type="Texture" id=271]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/17.png" type="Texture" id=272]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/26.png" type="Texture" id=273]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/32.png" type="Texture" id=274]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/38.png" type="Texture" id=275]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/24.png" type="Texture" id=276]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/25.png" type="Texture" id=277]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/28.png" type="Texture" id=278]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/40.png" type="Texture" id=279]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/19.png" type="Texture" id=280]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/34.png" type="Texture" id=281]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/35.png" type="Texture" id=282]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/36.png" type="Texture" id=283]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/37.png" type="Texture" id=284]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/16.png" type="Texture" id=285]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/18.png" type="Texture" id=286]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/21.png" type="Texture" id=287]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/22.png" type="Texture" id=288]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/23.png" type="Texture" id=289]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/27.png" type="Texture" id=290]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/30.png" type="Texture" id=291]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/31.png" type="Texture" id=292]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/33.png" type="Texture" id=293]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/20.png" type="Texture" id=294]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/29.png" type="Texture" id=295]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/walk/39.png" type="Texture" id=296]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/48.png" type="Texture" id=297]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/49.png" type="Texture" id=298]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/50.png" type="Texture" id=299]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/15.png" type="Texture" id=300]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/16.png" type="Texture" id=301]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/10.png" type="Texture" id=302]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/1.png" type="Texture" id=303]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/3.png" type="Texture" id=304]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/9.png" type="Texture" id=305]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/12.png" type="Texture" id=306]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/2.png" type="Texture" id=307]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/4.png" type="Texture" id=308]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/5.png" type="Texture" id=309]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/6.png" type="Texture" id=310]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/7.png" type="Texture" id=311]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/11.png" type="Texture" id=312]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/13.png" type="Texture" id=313]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/14.png" type="Texture" id=314]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/8.png" type="Texture" id=315]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/20.png" type="Texture" id=316]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/35.png" type="Texture" id=317]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/43.png" type="Texture" id=318]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/44.png" type="Texture" id=319]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/45.png" type="Texture" id=320]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/26.png" type="Texture" id=321]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/36.png" type="Texture" id=322]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/27.png" type="Texture" id=323]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/30.png" type="Texture" id=324]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/40.png" type="Texture" id=325]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/41.png" type="Texture" id=326]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/46.png" type="Texture" id=327]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/17.png" type="Texture" id=328]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/18.png" type="Texture" id=329]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/31.png" type="Texture" id=330]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/32.png" type="Texture" id=331]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/33.png" type="Texture" id=332]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/37.png" type="Texture" id=333]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/24.png" type="Texture" id=334]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/25.png" type="Texture" id=335]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/34.png" type="Texture" id=336]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/39.png" type="Texture" id=337]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/42.png" type="Texture" id=338]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/22.png" type="Texture" id=339]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/19.png" type="Texture" id=340]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/23.png" type="Texture" id=341]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/28.png" type="Texture" id=342]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/21.png" type="Texture" id=343]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/29.png" type="Texture" id=344]
+[ext_resource path="res://Assets/Stone Age/Soldiers/Dino Rider/die/38.png" type="Texture" id=345]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 84 ), ExtResource( 94 ), ExtResource( 85 ), ExtResource( 108 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 106 ), ExtResource( 109 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 141 ), ExtResource( 147 ), ExtResource( 116 ), ExtResource( 136 ), ExtResource( 118 ), ExtResource( 121 ), ExtResource( 134 ), ExtResource( 117 ), ExtResource( 125 ), ExtResource( 132 ) ],
-"loop": false,
-"name": "clubman_die",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 71 ), ExtResource( 79 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 63 ), ExtResource( 66 ), ExtResource( 82 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 68 ), ExtResource( 67 ), ExtResource( 72 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 76 ), ExtResource( 78 ), ExtResource( 99 ), ExtResource( 107 ), ExtResource( 88 ), ExtResource( 97 ), ExtResource( 104 ), ExtResource( 110 ), ExtResource( 90 ), ExtResource( 89 ), ExtResource( 96 ), ExtResource( 98 ), ExtResource( 86 ), ExtResource( 95 ), ExtResource( 115 ), ExtResource( 91 ), ExtResource( 103 ), ExtResource( 87 ), ExtResource( 83 ), ExtResource( 105 ) ],
 "loop": false,
 "name": "clubman_hit",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 111 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 155 ), ExtResource( 158 ), ExtResource( 178 ), ExtResource( 148 ), ExtResource( 167 ), ExtResource( 150 ), ExtResource( 192 ), ExtResource( 184 ), ExtResource( 187 ), ExtResource( 194 ), ExtResource( 185 ), ExtResource( 193 ), ExtResource( 205 ), ExtResource( 195 ), ExtResource( 190 ), ExtResource( 188 ), ExtResource( 207 ), ExtResource( 204 ), ExtResource( 201 ), ExtResource( 186 ), ExtResource( 181 ), ExtResource( 180 ), ExtResource( 191 ), ExtResource( 189 ), ExtResource( 199 ), ExtResource( 202 ), ExtResource( 196 ), ExtResource( 208 ), ExtResource( 203 ), ExtResource( 183 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 200 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 182 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 51 ), ExtResource( 4 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "dinorider_idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 25 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 20 ), ExtResource( 23 ), ExtResource( 26 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 54 ), ExtResource( 49 ), ExtResource( 52 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 31 ), ExtResource( 55 ), ExtResource( 48 ), ExtResource( 27 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 29 ), ExtResource( 33 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 36 ), ExtResource( 32 ), ExtResource( 38 ), ExtResource( 40 ), ExtResource( 34 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 50 ) ],
@@ -238,10 +362,35 @@ animations = [ {
 "loop": true,
 "name": "clubman_walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 84 ), ExtResource( 94 ), ExtResource( 85 ), ExtResource( 108 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 106 ), ExtResource( 109 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 141 ), ExtResource( 147 ), ExtResource( 116 ), ExtResource( 136 ), ExtResource( 118 ), ExtResource( 121 ), ExtResource( 134 ), ExtResource( 117 ), ExtResource( 125 ), ExtResource( 132 ) ],
+"loop": false,
+"name": "clubman_die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 111 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 155 ), ExtResource( 158 ), ExtResource( 178 ), ExtResource( 148 ), ExtResource( 167 ), ExtResource( 150 ), ExtResource( 192 ), ExtResource( 184 ), ExtResource( 187 ), ExtResource( 194 ), ExtResource( 185 ), ExtResource( 193 ), ExtResource( 205 ), ExtResource( 195 ), ExtResource( 190 ), ExtResource( 188 ), ExtResource( 207 ), ExtResource( 204 ), ExtResource( 201 ), ExtResource( 186 ), ExtResource( 181 ), ExtResource( 180 ), ExtResource( 191 ), ExtResource( 189 ), ExtResource( 199 ), ExtResource( 202 ), ExtResource( 196 ), ExtResource( 208 ), ExtResource( 203 ), ExtResource( 183 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 200 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 182 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 51 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "dinorider_idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 248 ), ExtResource( 268 ), ExtResource( 263 ), ExtResource( 244 ), ExtResource( 247 ), ExtResource( 257 ), ExtResource( 266 ), ExtResource( 251 ), ExtResource( 258 ), ExtResource( 249 ), ExtResource( 267 ), ExtResource( 271 ), ExtResource( 250 ), ExtResource( 259 ), ExtResource( 260 ), ExtResource( 285 ), ExtResource( 272 ), ExtResource( 286 ), ExtResource( 280 ), ExtResource( 294 ), ExtResource( 287 ), ExtResource( 288 ), ExtResource( 289 ), ExtResource( 276 ), ExtResource( 277 ), ExtResource( 273 ), ExtResource( 290 ), ExtResource( 278 ), ExtResource( 295 ), ExtResource( 291 ), ExtResource( 292 ), ExtResource( 274 ), ExtResource( 293 ), ExtResource( 281 ), ExtResource( 282 ), ExtResource( 283 ), ExtResource( 284 ), ExtResource( 275 ), ExtResource( 296 ), ExtResource( 279 ) ],
+"loop": true,
+"name": "dinorider_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 217 ), ExtResource( 213 ), ExtResource( 235 ), ExtResource( 224 ), ExtResource( 222 ), ExtResource( 231 ), ExtResource( 228 ), ExtResource( 236 ), ExtResource( 232 ), ExtResource( 218 ), ExtResource( 230 ), ExtResource( 233 ), ExtResource( 229 ), ExtResource( 220 ), ExtResource( 211 ), ExtResource( 237 ), ExtResource( 234 ), ExtResource( 212 ), ExtResource( 225 ), ExtResource( 238 ), ExtResource( 223 ), ExtResource( 216 ), ExtResource( 221 ), ExtResource( 239 ), ExtResource( 219 ), ExtResource( 226 ), ExtResource( 227 ), ExtResource( 210 ), ExtResource( 255 ), ExtResource( 261 ), ExtResource( 269 ), ExtResource( 245 ), ExtResource( 265 ), ExtResource( 264 ), ExtResource( 240 ), ExtResource( 246 ), ExtResource( 270 ), ExtResource( 262 ), ExtResource( 253 ), ExtResource( 254 ), ExtResource( 242 ), ExtResource( 256 ), ExtResource( 243 ), ExtResource( 252 ), ExtResource( 241 ) ],
+"loop": false,
+"name": "dinorider_hit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 303 ), ExtResource( 307 ), ExtResource( 304 ), ExtResource( 308 ), ExtResource( 309 ), ExtResource( 310 ), ExtResource( 311 ), ExtResource( 315 ), ExtResource( 305 ), ExtResource( 302 ), ExtResource( 312 ), ExtResource( 306 ), ExtResource( 313 ), ExtResource( 314 ), ExtResource( 300 ), ExtResource( 301 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 340 ), ExtResource( 316 ), ExtResource( 343 ), ExtResource( 339 ), ExtResource( 341 ), ExtResource( 334 ), ExtResource( 335 ), ExtResource( 321 ), ExtResource( 323 ), ExtResource( 342 ), ExtResource( 344 ), ExtResource( 324 ), ExtResource( 330 ), ExtResource( 331 ), ExtResource( 332 ), ExtResource( 336 ), ExtResource( 317 ), ExtResource( 322 ), ExtResource( 333 ), ExtResource( 345 ), ExtResource( 337 ), ExtResource( 325 ), ExtResource( 326 ), ExtResource( 338 ), ExtResource( 318 ), ExtResource( 319 ), ExtResource( 320 ), ExtResource( 327 ), ExtResource( 166 ), ExtResource( 297 ), ExtResource( 298 ), ExtResource( 299 ) ],
+"loop": false,
+"name": "dinorider_die",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 71.4949, 126.751 )
+extents = Vector2( 33.7425, 126.751 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -261,12 +410,12 @@ script = ExtResource( 214 )
 texture = ExtResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( -1091.51, 0.419617 )
+position = Vector2( -2010.87, 5.85396 )
 rotating = true
 current = true
 zoom = Vector2( 3, 3 )
-limit_left = -2900
-limit_right = 1000
+limit_left = -3100
+limit_right = 1100
 limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -276,30 +425,31 @@ drag_margin_left = 0.72
 drag_margin_right = 0.72
 script = ExtResource( 2 )
 
-[node name="clubman" type="KinematicBody2D" parent="."]
-position = Vector2( -2384.55, 657.373 )
+[node name="Characters" type="KinematicBody2D" parent="."]
+position = Vector2( -1000, 673.697 )
 script = ExtResource( 215 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="clubman"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Characters"]
 frames = SubResource( 1 )
-animation = "clubman_idle"
+animation = "dinorider_die"
 speed_scale = 6.0
+offset = Vector2( -108.957, -58.535 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="clubman"]
-show_behind_parent = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Characters"]
 shape = SubResource( 2 )
 
-[node name="Gui" type="Control" parent="clubman"]
+[node name="Gui" type="Control" parent="Characters"]
 modulate = Color( 0.611765, 0, 0, 1 )
-margin_top = -155.115
-margin_right = 20.0
-margin_bottom = -152.115
+margin_left = -40.9973
+margin_top = -152.899
+margin_right = -20.9973
+margin_bottom = -149.899
 rect_scale = Vector2( 4, 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="hp_bg" type="ColorRect" parent="clubman/Gui"]
+[node name="hp_bg" type="ColorRect" parent="Characters/Gui"]
 margin_right = 20.0
 margin_bottom = 3.0
 color = Color( 0.117647, 0.054902, 0.054902, 1 )
@@ -307,17 +457,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="hp_bar" type="ColorRect" parent="clubman/Gui"]
-margin_right = 18.0
+[node name="hp_bar" type="ColorRect" parent="Characters/Gui"]
+margin_right = 20.0
 margin_bottom = 3.0
 color = Color( 0.741176, 0.0470588, 0.0470588, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="RayCast2D" type="RayCast2D" parent="Characters"]
+enabled = true
+cast_to = Vector2( 500, 0 )
+
 [node name="base" type="KinematicBody2D" parent="."]
 position = Vector2( -3044.58, 528.619 )
-script = ExtResource( 166 )
+script = ExtResource( 215 )
 
 [node name="Sprite" type="AnimatedSprite" parent="base"]
 scale = Vector2( 0.7, 0.7 )
@@ -327,3 +481,35 @@ animation = "stone"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="base"]
 scale = Vector2( 4, 4 )
 shape = SubResource( 4 )
+
+[node name="RayCast2D" type="RayCast2D" parent="base"]
+position = Vector2( 0, 130 )
+enabled = true
+cast_to = Vector2( 600, 0 )
+
+[node name="Gui" type="Control" parent="base"]
+margin_top = -500.0
+margin_right = 100.0
+margin_bottom = -400.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hp_bg" type="ColorRect" parent="base/Gui"]
+margin_right = 500.0
+margin_bottom = 50.0
+rect_rotation = 270.0
+color = Color( 0.117647, 0.054902, 0.054902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hp_bar" type="ColorRect" parent="base/Gui"]
+modulate = Color( 0.835294, 0, 0, 1 )
+margin_right = 500.0
+margin_bottom = 50.0
+rect_rotation = 270.0
+color = Color( 0.741176, 0.0470588, 0.0470588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

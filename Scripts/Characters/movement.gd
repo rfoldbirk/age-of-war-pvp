@@ -3,16 +3,17 @@ extends "res://Scripts/Characters/health.gd"
 onready var animSprite = get_node_or_null("AnimatedSprite")
 onready var collider = get_node("CollisionShape2D")
 
-# disse variabler får deres værdier fra rummet 👽🌌🤷
+# disse variabler får deres værdier fra rummet    
 var direction
-var myName
+var Type
 var offsets
 var hitFrame
+var width
 
 var setupDone = false
 
 func setupMovement():
-	# print("Oprettede: ", myName)
+	# print("Oprettede: ", Type)
 
 	visible = true
 	get_node("CollisionShape2D").disabled = false
@@ -20,19 +21,25 @@ func setupMovement():
 	if animSprite == null:
 		animSprite = get_node("Sprite")
 
-	if myName != 'base' or myName == null:
+	if Type != 'base' or Type == null:
 		animSprite.playing = true
-		animSprite.animation = str(myName, '_idle')
+		animSprite.animation = str(Type, '_idle')
 
 	
 	if (direction == 1):
 		animSprite.flip_h = false
-		if myName != 'base':
-			collider.position.x = offsets.collider[0]
+		
 	else:
 		animSprite.flip_h = true
-		if myName != 'base':
-			collider.position.x = offsets.collider[1]
+
+	if Type != 'base':
+		collider.position.x = direction * offsets.collisionBox.offset.x
+		collider.position.y = direction * offsets.collisionBox.offset.y
+	
+	get_node("RayCast2D").set_cast_to(Vector2(direction*get_node("RayCast2D").get_cast_to().x, 0))
+
+
+	width = get_node("/root/Game").get("Characters")[Type]["width"]
 
 	setupDone = true
 
@@ -41,10 +48,12 @@ var deb = true
 var hitDeb = true
 var hasNotHitDeb = true
 var currentTarget
-var stuck = false
+var mayNotMove = false
 
-func _process(_delta):
-	if myName == 'base' or !setupDone:
+onready var raycast = get_node_or_null("RayCast2D")
+
+func _process(delta):
+	if Type == 'base' or !setupDone or get_node("/root/Game").get("state") != "game":
 		return
 		
 
@@ -57,45 +66,91 @@ func _process(_delta):
 		return
 
 	# hit animationen er ikke sat til at loope
-	if !hitDeb and !stuck:
+	if !hitDeb:
 		var amount_of_frames = animSprite.frames.get_frame_count(animSprite.animation) - 1
 		if animSprite.frame == amount_of_frames:
 			hitDeb = true
 
 		if animSprite.frame == hitFrame and hasNotHitDeb:
-			currentTarget.takeDamage(myName)
+			currentTarget.takeDamage(Type)
 			hasNotHitDeb = false
 
-	if !test_move(transform, Vector2(direction * 1, 0) ):
-		stuck = true
 
+	mayNotMove = false
 
-	var collisionObject = move_and_collide(Vector2(direction * 1, 0))
-	if collisionObject != null and deb:
-		#deb = false
-
-		if hitDeb and !stuck:
-			animSprite.animation = str(myName, '_idle')
-
-		var target = collisionObject.collider
+	if raycast.is_colliding():
+		var target = raycast.get_collider()
 		var sprite = target.get_node_or_null("Sprite")
-
 		if sprite == null:
 			sprite = target.get_node_or_null("AnimatedSprite")
 
-		if target == null or sprite == null:
-			return
+		var distance = position.x - raycast.get_collision_point().x
+		if distance < 0:
+			distance = -distance
 
-		if sprite.flip_h != get_node("AnimatedSprite").flip_h && hitDeb and !stuck:
-			# det betyder at vi er stødt ind i en fjende
-			animSprite.animation = str(myName, '_hit')
-			animSprite.frame = 0 # for en sikkerhedsskyld sørger jeg for at animationen starter helt fra begyndelsen
-			hitDeb = false # sikre at denne 'event' ikke bliver trigget alt for hurtigt
-			hasNotHitDeb = true
-			currentTarget = target
-	else:
-		# hvis den ikke kolliderer med noget, skal den bare køre gå animationen.
-		if hitDeb and !stuck:
-			animSprite.animation = str(myName, '_walk')
+		distance -= width/2
 
+		var enemy = false
+
+		if sprite.flip_h != get_node("AnimatedSprite").flip_h:
+			enemy = true	
+
+		if target.Type == "base":
+			distance -= 0
+			
+
+		if distance < width:
+			mayNotMove = true
+			if hitDeb:
+				if enemy:
+					animSprite.animation = str(Type, '_hit')
+					animSprite.frame = 0 # for en sikkerhedsskyld sørger jeg for at animationen starter helt fra begyndelsen
+					hitDeb = false # sikre at denne 'event' ikke bliver trigget alt for hurtigt
+					hasNotHitDeb = true
+					currentTarget = target
+				else:
+					animSprite.animation = str(Type, '_idle')
+		
+			
+
+	if !mayNotMove and hitDeb: # må godt bevæge sig
+		position.x += direction * 120 * delta
+		animSprite.animation = str(Type, '_walk')
+
+	# else:
+	# 	# var collisionObject = move_and_collide(Vector2(direction * 1, 0))
+
+		# if collisionObject != null and deb:
+		# 	#deb = false
+		# 	cantMove(collisionObject)
+			
+		# else:
+		# 	# hvis den ikke kolliderer med noget, skal den bare afspille gå animationen.
+		# 	if hitDeb:
+		# 		animSprite.animation = str(Type, '_walk')
+	
 	pass
+
+
+
+
+func cantMove(collisionObject):
+	if hitDeb:
+		animSprite.animation = str(Type, '_idle')
+
+	var target = collisionObject.collider
+	var sprite = target.get_node_or_null("Sprite")
+
+	if sprite == null:
+		sprite = target.get_node_or_null("AnimatedSprite")
+
+	if target == null or sprite == null:
+		return
+
+	if sprite.flip_h != get_node("AnimatedSprite").flip_h && hitDeb:
+		# det betyder at vi er stødt ind i en fjende
+		animSprite.animation = str(Type, '_hit')
+		animSprite.frame = 0 # for en sikkerhedsskyld sørger jeg for at animationen starter helt fra begyndelsen
+		hitDeb = false # sikre at denne 'event' ikke bliver trigget alt for hurtigt
+		hasNotHitDeb = true
+		currentTarget = target
