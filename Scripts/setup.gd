@@ -1,9 +1,11 @@
-extends Node2D
+extends "res://Scripts/ws.gd"
 
 var state = "game"
+var DIR = 1
 
-func set_state(s):
+func setup(s, d):
 	state = s
+	DIR = d
 
 const Characters = {
 	"base": {
@@ -71,7 +73,7 @@ const Characters = {
 		"price": 100,
 		"hitframe": 20,
 		"health": 190,
-		"spawnTime": 2,
+		"spawnTime": 2.5,
 		"damage": {
 			"hit": 40
 		},
@@ -109,26 +111,20 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
+	if state != "game":
+		return
+
 	if Queue.size() == 0:
 		return
 
 	var item = Queue[0]
-
-	if SpawnTime == 0:
-		SpawnTime = item.spawnTime
-
-
 	
-	Timer += delta
-	if Timer > SpawnTime:
-		Timer = SpawnTime
+	var time = OS.get_system_time_msecs()
 
-	if Timer >= SpawnTime && canSpawn(item.direction):
+	if time >= item.spawnTime && canSpawn(item.direction):
 		print('Spawning: ', item.name)
 
-		Timer = 0
-		SpawnTime = 0
 		Queue.pop_front()
 
 		spawnCharacter(item.name, item.direction)
@@ -141,6 +137,9 @@ func canSpawn(direction):
 	for i in children:
 		if i.get("direction") == direction and i.get("Type") == "base":
 			base = i
+
+	if base == null:
+		return false
 
 	var raycast = base.get_node("RayCast2D")
 	if !raycast.is_colliding():
@@ -158,7 +157,7 @@ func requestCharacter(name="Club Man", direction=1):
 	Queue.append({
 		"name": name,
 		"direction": direction,
-		"spawnTime": Characters[name]["spawnTime"]
+		"spawnTime": OS.get_system_time_msecs() + Characters[name]["spawnTime"] * 1000
 	})
 
 

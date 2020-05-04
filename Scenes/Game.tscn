@@ -234,3 +234,6 @@ color = Color( 0.741176, 0.0470588, 0.0470588, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Control/TextureButton" to="Control" method="_on_TextureButton_pressed" binds= [ "Club Man" ]]
+[connection signal="pressed" from="Control/TextureButton2" to="Control" method="_on_TextureButton_pressed" binds= [ "Slingshot Man" ]]
+[connection signal="pressed" from="Control/TextureButton3" to="Control" method="_on_TextureButton_pressed" binds= [ "Dino Rider" ]]
