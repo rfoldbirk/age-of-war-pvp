@@ -8,3 +8,7 @@ func _process(_delta):
 func _on_TextureButton_pressed(ch):
 	var dir = get_node("/root/Game").get("DIR")
 	get_node("/root/Game").requestCharacter(ch, dir)
+
+
+func _on_Button_pressed():
+	OS.execute(OS.get_executable_path(), OS.get_cmdline_args(), false, [])

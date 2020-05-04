@@ -1,7 +1,7 @@
 extends "res://Scripts/ws.gd"
 
-var state = "game"
-var DIR = 1
+var state = "pause"
+var DIR = 2
 
 func setup(s, d):
 	state = s
@@ -103,10 +103,10 @@ func _ready():
 	
 	#requestCharacter("Club Man", 1)
 	#requestCharacter("Slingshot Man", 1)
-	requestCharacter("Dino Rider", 1)
+	#requestCharacter("Dino Rider", 1)
 	
 	#requestCharacter("Dino Rider", -1)
-	requestCharacter("Slingshot Man", -1)
+	#requestCharacter("Slingshot Man", -1)
 	#requestCharacter("Club Man", -1)
 
 
@@ -154,11 +154,12 @@ var SpawnTime = 0
 
 
 func requestCharacter(name="Club Man", direction=1):
-	Queue.append({
+	_client.get_peer(1).put_packet(JSON.print({
+		"event":"requestCharacter",
 		"name": name,
 		"direction": direction,
 		"spawnTime": OS.get_system_time_msecs() + Characters[name]["spawnTime"] * 1000
-	})
+	}).to_utf8())
 
 
 func spawnCharacter(name, direction, x=0):
