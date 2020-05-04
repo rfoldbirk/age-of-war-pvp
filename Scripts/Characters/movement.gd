@@ -3,7 +3,7 @@ extends "res://Scripts/Characters/health.gd"
 onready var animSprite = get_node_or_null("AnimatedSprite")
 onready var collider = get_node("CollisionShape2D")
 
-# disse variabler får deres værdier fra rummet 👽🌌🤷
+# disse variabler får deres værdier fra rummet    
 var direction
 var myName
 var offsets
@@ -67,7 +67,7 @@ func _process(_delta):
 			hasNotHitDeb = false
 
 	if !test_move(transform, Vector2(direction * 1, 0) ):
-		stuck = true
+		stuck = false
 
 
 	var collisionObject = move_and_collide(Vector2(direction * 1, 0))
