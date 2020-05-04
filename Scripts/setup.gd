@@ -7,10 +7,9 @@ func set_state(s):
 
 const Characters = {
 	"base": {
-		"health": 500,
-		"width": 110
+		"health": 500
 	},
-	"clubman": {
+	"Club Man": {
 		"offsets": {
 			"idle": Vector2(35.871, 0),
 			"hit": Vector2(49.361, -37.567),
@@ -21,13 +20,44 @@ const Characters = {
 				"offset": Vector2(0, 0)
 			}
 		},
+		"price": 5,
 		"hitframe": 20,
-		"health": 15,
+		"health": 140,
 		"spawnTime": 0.1,
-		"damage": 5,
-		"width": 90
+		"damage": {
+			"hit": 25
+		},
+		"reach": {
+			"hit": 100
+		}
 	},
-	"dinorider": {
+	"Slingshot Man": {
+		"offsets": {
+			"idle": Vector2(5.022, -1.891),
+			"hit": Vector2(47.156, -25.156),
+			"walk": Vector2(5.022, -1.891),
+			"die": Vector2(-57.071, 300.882),
+			"walk&shoot": Vector2(62, -4),
+			"stand&shoot": Vector2(81, -2),
+			"collisionBox": {
+				"size": Vector2(0, 0),
+				"offset": Vector2(0, 0)
+			}
+		},
+		"price": 25,
+		"hitframe": 20,
+		"health": 90,
+		"spawnTime": 1,
+		"damage": {
+			"hit": 10,
+			"shoot": 70
+		},
+		"reach": {
+			"hit": 100,
+			"shoot": 1000
+		}
+	},
+	"Dino Rider": {
 		"offsets": {
 			"idle": Vector2(35.871, -72.082),
 			"hit": Vector2(88.292, -68.761),
@@ -38,19 +68,27 @@ const Characters = {
 				"offset": Vector2(0, 0)
 			}
 		},
+		"price": 100,
 		"hitframe": 20,
-		"health": 30,
+		"health": 190,
 		"spawnTime": 2,
-		"damage": 15,
-		"width": 200
+		"damage": {
+			"hit": 40
+		},
+		"reach": {
+			"hit": 190
+		}
 	}
 }
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(OS.get_system_time_msecs())
+
 	get_node("Characters").visible = false
 	get_node("Characters").get_node("CollisionShape2D").disabled = true
+	get_node("Characters/AnimatedSprite").position = Vector2.ZERO
 
 	var second_base = get_node("base").duplicate()
 	second_base.position.x = 1000
@@ -59,16 +97,15 @@ func _ready():
 	get_node("base").init("base", 1, Characters["base"]["health"])
 	second_base.init("base", -1, Characters["base"]["health"])
 
-	spawnCharacter("dinorider", 1, 2000)
-	# requestCharacter("dinorider", -1)
-	# requestCharacter("dinorider", 1)
-	# requestCharacter("clubman", -1)
+	# spawnCharacter("Slingshot Man", -1, 1500)
 	
-	requestCharacter("clubman", -1)
-	# requestCharacter("clubman", 1)
-	# requestCharacter("clubman", 1)
-	# requestCharacter("clubman", 1)
-	# requestCharacter("clubman", 1)
+	#requestCharacter("Club Man", 1)
+	#requestCharacter("Slingshot Man", 1)
+	requestCharacter("Dino Rider", 1)
+	
+	#requestCharacter("Dino Rider", -1)
+	requestCharacter("Slingshot Man", -1)
+	#requestCharacter("Club Man", -1)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -117,7 +154,7 @@ var Timer = 0
 var SpawnTime = 0
 
 
-func requestCharacter(name="clubman", direction=1):
+func requestCharacter(name="Club Man", direction=1):
 	Queue.append({
 		"name": name,
 		"direction": direction,
