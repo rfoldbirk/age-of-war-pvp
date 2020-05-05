@@ -189,13 +189,84 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="second_client" type="Button" parent="Control"]
-margin_left = 1991.0
-margin_top = 297.0
-margin_right = 2400.0
-margin_bottom = 372.0
+[node name="Menu" type="Control" parent="Control"]
+margin_left = 1213.56
+margin_top = 954.825
+margin_right = 1253.56
+margin_bottom = 994.825
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_bg" type="ColorRect" parent="Control/Menu"]
+margin_left = -515.0
+margin_top = -585.0
+margin_right = 515.0
+margin_bottom = -77.0
+color = Color( 0.101961, 0.101961, 0.101961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_title" type="Label" parent="Control/Menu"]
+margin_left = -401.818
+margin_top = -409.159
+margin_right = 405.182
+margin_bottom = -357.159
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Do you want to play local or online?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_title2" type="Label" parent="Control/Menu"]
+margin_left = -518.516
+margin_top = -609.162
+margin_right = 170.484
+margin_bottom = -447.162
+rect_scale = Vector2( 1.5, 1.5 )
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "
+Age of War PvP
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_local" type="Button" parent="Control/Menu"]
+margin_left = -422.344
+margin_top = -293.228
+margin_right = -13.3436
+margin_bottom = -218.228
 custom_fonts/font = SubResource( 3 )
-text = "Press to open second client"
+text = "Local"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_online" type="Button" parent="Control/Menu"]
+margin_left = 12.3701
+margin_top = -293.228
+margin_right = 421.37
+margin_bottom = -218.228
+custom_fonts/font = SubResource( 3 )
+text = "Online"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="second_client" type="Button" parent="Control/Menu"]
+margin_left = -421.0
+margin_top = -188.0
+margin_right = 421.0
+margin_bottom = -113.0
+custom_fonts/font = SubResource( 3 )
+text = "Press to open a second client"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -317,4 +388,6 @@ __meta__ = {
 [connection signal="pressed" from="Control/TextureButton2" to="Control" method="_on_TextureButton_pressed" binds= [ "Slingshot Man" ]]
 [connection signal="mouse_entered" from="Control/TextureButton3" to="Control" method="_on_TextureButton_mouse_entered" binds= [ "Dino Rider" ]]
 [connection signal="pressed" from="Control/TextureButton3" to="Control" method="_on_TextureButton_pressed" binds= [ "Dino Rider" ]]
-[connection signal="pressed" from="Control/second_client" to="Control" method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/Menu/menu_local" to="Control" method="_on_menu_btn_pressed" binds= [ "local" ]]
+[connection signal="pressed" from="Control/Menu/menu_online" to="Control" method="_on_menu_btn_pressed" binds= [ "online" ]]
+[connection signal="pressed" from="Control/Menu/second_client" to="Control" method="_on_Button_pressed"]
