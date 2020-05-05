@@ -8,7 +8,7 @@ func _ready():
 	_client.connect("connection_established", self, "_connected")
 	_client.connect("data_received", self, "_on_data")
 
-	var err = _client.connect_to_url("ws://nfs.codes:3000")
+	var err = _client.connect_to_url("ws://nfs.codes:2052") # nfs.codes:2052
 	if err != OK:
 		print("Unable to connect")
 

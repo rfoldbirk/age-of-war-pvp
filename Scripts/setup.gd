@@ -2,6 +2,12 @@ extends "res://Scripts/ws.gd"
 
 var state = "pause"
 var DIR = 2
+var MONEY = 150
+
+var MONEY_GIVING_TIMER = 0
+
+onready var countdown = get_node("/root/Game/Control/Countdown")
+onready var moneylbl = get_node("/root/Game/Control/Money")
 
 func setup(s, d):
 	state = s
@@ -22,7 +28,7 @@ const Characters = {
 				"offset": Vector2(0, 0)
 			}
 		},
-		"price": 5,
+		"price": 25,
 		"hitframe": 20,
 		"health": 140,
 		"spawnTime": 0.1,
@@ -46,7 +52,7 @@ const Characters = {
 				"offset": Vector2(0, 0)
 			}
 		},
-		"price": 25,
+		"price": 50,
 		"hitframe": 20,
 		"health": 90,
 		"spawnTime": 1,
@@ -99,21 +105,26 @@ func _ready():
 	get_node("base").init("base", 1, Characters["base"]["health"])
 	second_base.init("base", -1, Characters["base"]["health"])
 
-	# spawnCharacter("Slingshot Man", -1, 1500)
-	
-	#requestCharacter("Club Man", 1)
-	#requestCharacter("Slingshot Man", 1)
-	#requestCharacter("Dino Rider", 1)
-	
-	#requestCharacter("Dino Rider", -1)
-	#requestCharacter("Slingshot Man", -1)
-	#requestCharacter("Club Man", -1)
+	update_money(0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if state != "game":
 		return
+
+	var client_btn = get_node_or_null("/root/Game/Control/second_client")
+	if client_btn != null:
+		client_btn.queue_free()
+
+	MONEY_GIVING_TIMER += _delta
+
+	if MONEY_GIVING_TIMER >= 1:
+		MONEY_GIVING_TIMER = 0
+		if MONEY > 150:
+			update_money(-1)
+		elif MONEY < 150:
+			update_money(1)
 
 	if Queue.size() == 0:
 		return
@@ -122,12 +133,15 @@ func _process(_delta):
 	
 	var time = OS.get_system_time_msecs()
 
-	if time >= item.spawnTime && canSpawn(item.direction):
+	if time >= item.spawnTime:
 		print('Spawning: ', item.name)
-
 		Queue.pop_front()
-
 		spawnCharacter(item.name, item.direction)
+		countdown.text = ""
+	else:
+		var timeLeft = item.spawnTime - time
+		if item.direction == DIR:
+			countdown.text = str(stepify(timeLeft/1000, 1)+1)
 	
 
 func canSpawn(direction):
@@ -149,16 +163,32 @@ func canSpawn(direction):
 
 
 var Queue = []
-var Timer = 0
-var SpawnTime = 0
+
+func update_money(amount):
+	if MONEY + amount < 0:
+		return false
+	MONEY += amount
+	moneylbl.text = str(MONEY, "$")
+	return true
+
+func get_total_spawntime(d):
+	var t = 0
+	for i in Queue:
+		if d == i.direction:
+			t += Characters[i.name]["spawnTime"]
+
+	return t
 
 
 func requestCharacter(name="Club Man", direction=1):
+	if !update_money(-Characters[name]["price"]):
+		return
+
 	_client.get_peer(1).put_packet(JSON.print({
 		"event":"requestCharacter",
 		"name": name,
 		"direction": direction,
-		"spawnTime": OS.get_system_time_msecs() + Characters[name]["spawnTime"] * 1000
+		"spawnTime": OS.get_system_time_msecs() + (get_total_spawntime(direction) + Characters[name]["spawnTime"]) * 1000
 	}).to_utf8())
 
 

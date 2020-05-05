@@ -54,6 +54,7 @@ func init(Name, Direction, Health = 15, Offsets={}, Hitframe = 20):
 		collider.position.y = direction * offsets.collisionBox.offset.y
 	
 	get_node("RayCast2D").set_cast_to(Vector2(direction*get_node("RayCast2D").get_cast_to().x, 0))
+	get_node("RayCast2D").set_position(Vector2(get_node("RayCast2D").position.x*direction, 0))
 	get_node("Sight").set_cast_to(Vector2(direction*get_node("Sight").get_cast_to().x, 0))
 
 

@@ -23,7 +23,7 @@ font_data = ExtResource( 213 )
 font_path = "res://Assets/Miscellaneous/Age Of War.ttf"
 
 [sub_resource type="DynamicFont" id=3]
-size = 50
+size = 30
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 2 )
@@ -132,12 +132,55 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Countdown" type="Label" parent="Control"]
+margin_left = 493.559
+margin_top = 28.3604
+margin_right = 963.559
+margin_bottom = 125.36
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "
+"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Money" type="Label" parent="Control"]
+margin_left = 61.0092
+margin_top = 13.5134
+margin_right = 428.009
+margin_bottom = 175.513
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "
+25$
+"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="Label" parent="Control"]
+margin_left = 494.919
+margin_top = 134.469
+margin_right = 964.919
+margin_bottom = 231.469
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="connection" type="Label" parent="Control"]
-margin_left = 2198.34
+margin_left = 1742.34
 margin_top = 30.3298
-margin_right = 2324.34
+margin_right = 2051.34
 margin_bottom = 82.3298
-rect_scale = Vector2( 0.5, 0.5 )
 size_flags_stretch_ratio = 0.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
@@ -146,13 +189,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Control"]
-margin_left = 76.395
-margin_top = 72.4201
-margin_right = 340.395
-margin_bottom = 179.42
+[node name="second_client" type="Button" parent="Control"]
+margin_left = 1991.0
+margin_top = 297.0
+margin_right = 2400.0
+margin_bottom = 372.0
 custom_fonts/font = SubResource( 3 )
-text = "Client_2"
+text = "Press to open second client"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -2010.87, 5.85396 )
@@ -210,6 +256,7 @@ __meta__ = {
 }
 
 [node name="RayCast2D" type="RayCast2D" parent="Characters"]
+position = Vector2( 39.386, 0 )
 enabled = true
 cast_to = Vector2( 1000, 0 )
 
@@ -231,7 +278,6 @@ scale = Vector2( 4, 4 )
 shape = SubResource( 6 )
 
 [node name="RayCast2D" type="RayCast2D" parent="base"]
-position = Vector2( 0, 130 )
 enabled = true
 cast_to = Vector2( 600, 0 )
 
@@ -265,7 +311,10 @@ color = Color( 0.741176, 0.0470588, 0.0470588, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="mouse_entered" from="Control/TextureButton" to="Control" method="_on_TextureButton_mouse_entered" binds= [ "Club Man" ]]
 [connection signal="pressed" from="Control/TextureButton" to="Control" method="_on_TextureButton_pressed" binds= [ "Club Man" ]]
+[connection signal="mouse_entered" from="Control/TextureButton2" to="Control" method="_on_TextureButton_mouse_entered" binds= [ "Slingshot Man" ]]
 [connection signal="pressed" from="Control/TextureButton2" to="Control" method="_on_TextureButton_pressed" binds= [ "Slingshot Man" ]]
+[connection signal="mouse_entered" from="Control/TextureButton3" to="Control" method="_on_TextureButton_mouse_entered" binds= [ "Dino Rider" ]]
 [connection signal="pressed" from="Control/TextureButton3" to="Control" method="_on_TextureButton_pressed" binds= [ "Dino Rider" ]]
-[connection signal="pressed" from="Control/Button" to="Control" method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/second_client" to="Control" method="_on_Button_pressed"]

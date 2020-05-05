@@ -7,6 +7,12 @@ var dead = false # det giver vel ldit sig selv.
 var healthBarSize = 20 # størrelsen på en normal health bar
 var healthSet = false # sikre at man ikke lige pludselig kommer til at heale en karakter
 
+var remove_timer = 0
+var remove_timer_max = 10 # ca. hvor mange sekunder før lig bliver fjernet
+var alpha: float = 1
+
+onready var Characters = get_node("/root/Game").get("Characters")
+
 func set_health(hp):
 	if !healthSet: # 	   første gang denne funktion bliver kaldt
 		healthSet = true # bliver begge variabler indstillet.
@@ -18,7 +24,6 @@ func set_health(hp):
 		healthBarSize = 500
 
 func takeDamage(name_of_character):
-	var Characters = get_node("/root/Game").get("Characters")
 
 	if !Characters.has(name_of_character):
 		return false
@@ -50,5 +55,28 @@ func takeDamage(name_of_character):
 			get_node(".").get_node("CollisionShape2D").disabled = true
 			get_node(".").get_node("Gui").visible = false
 			dead = true
+	
+		if get_node(".").get("Type") == "base":
+			if get_node("/root/Game").get("DIR") == get_node(".").get("direction"):
+				# mig selv
+				OS.alert("DU HAR TABT!", "ØV BØV")
+			else:
+				OS.alert("Du tværede ham den anden!", "Tillykke")
+
+			get_tree().quit()
 
 	return true
+
+
+func _process(delta):
+	if dead:
+		alpha -= delta
+		if alpha < 0:
+			# det er her de dør
+			if get_node(".").get("direction") != get_node("/root/Game").get("DIR"):
+				var won_money = Characters[get_node(".").get("Type")]["price"] * 2
+
+				get_node("/root/Game").update_money(won_money)
+
+			get_node(".").queue_free()
+		get_node("AnimatedSprite").modulate = Color(1, 1, 1, alpha)

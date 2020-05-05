@@ -876,49 +876,29 @@ animations = [ {
 "name": "Club Man_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 158 ), ExtResource( 152 ), ExtResource( 180 ), ExtResource( 145 ), ExtResource( 151 ), ExtResource( 147 ), ExtResource( 185 ), ExtResource( 173 ), ExtResource( 156 ), ExtResource( 153 ), ExtResource( 148 ), ExtResource( 154 ), ExtResource( 175 ), ExtResource( 155 ), ExtResource( 159 ), ExtResource( 170 ), ExtResource( 166 ), ExtResource( 174 ), ExtResource( 161 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 193 ), ExtResource( 186 ), ExtResource( 195 ), ExtResource( 157 ), ExtResource( 167 ), ExtResource( 183 ), ExtResource( 194 ), ExtResource( 191 ), ExtResource( 169 ), ExtResource( 1 ), ExtResource( 192 ), ExtResource( 168 ), ExtResource( 177 ), ExtResource( 164 ), ExtResource( 160 ), ExtResource( 181 ), ExtResource( 171 ), ExtResource( 162 ), ExtResource( 165 ), ExtResource( 184 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 172 ), ExtResource( 163 ), ExtResource( 176 ), ExtResource( 182 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 187 ) ],
-"loop": true,
-"name": "Club Man_idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 338 ), ExtResource( 337 ), ExtResource( 462 ), ExtResource( 470 ), ExtResource( 431 ), ExtResource( 452 ), ExtResource( 447 ), ExtResource( 471 ), ExtResource( 472 ), ExtResource( 473 ), ExtResource( 446 ), ExtResource( 358 ), ExtResource( 354 ), ExtResource( 362 ), ExtResource( 360 ), ExtResource( 334 ), ExtResource( 343 ), ExtResource( 494 ), ExtResource( 347 ), ExtResource( 353 ), ExtResource( 361 ), ExtResource( 355 ), ExtResource( 486 ), ExtResource( 356 ) ],
-"loop": false,
-"name": "Slingshot Man_die",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 493 ), ExtResource( 480 ), ExtResource( 384 ), ExtResource( 374 ), ExtResource( 396 ), ExtResource( 375 ), ExtResource( 373 ), ExtResource( 376 ), ExtResource( 387 ), ExtResource( 414 ), ExtResource( 397 ), ExtResource( 416 ), ExtResource( 367 ), ExtResource( 425 ), ExtResource( 422 ), ExtResource( 366 ), ExtResource( 423 ), ExtResource( 378 ), ExtResource( 405 ), ExtResource( 420 ), ExtResource( 381 ), ExtResource( 390 ), ExtResource( 408 ), ExtResource( 424 ), ExtResource( 426 ), ExtResource( 419 ), ExtResource( 427 ), ExtResource( 380 ), ExtResource( 389 ), ExtResource( 398 ), ExtResource( 382 ), ExtResource( 421 ), ExtResource( 391 ), ExtResource( 404 ), ExtResource( 379 ), ExtResource( 413 ), ExtResource( 428 ), ExtResource( 365 ), ExtResource( 371 ), ExtResource( 386 ), ExtResource( 406 ), ExtResource( 440 ), ExtResource( 399 ), ExtResource( 442 ), ExtResource( 407 ), ExtResource( 435 ), ExtResource( 444 ), ExtResource( 438 ), ExtResource( 409 ), ExtResource( 434 ) ],
-"loop": true,
-"name": "Slingshot Man_idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 328 ), ExtResource( 225 ), ExtResource( 329 ), ExtResource( 222 ), ExtResource( 214 ), ExtResource( 209 ), ExtResource( 200 ), ExtResource( 218 ), ExtResource( 331 ), ExtResource( 324 ), ExtResource( 217 ), ExtResource( 205 ), ExtResource( 211 ), ExtResource( 212 ), ExtResource( 327 ), ExtResource( 323 ), ExtResource( 213 ), ExtResource( 223 ), ExtResource( 383 ), ExtResource( 207 ), ExtResource( 377 ), ExtResource( 385 ), ExtResource( 370 ), ExtResource( 202 ), ExtResource( 204 ), ExtResource( 219 ), ExtResource( 216 ), ExtResource( 393 ), ExtResource( 388 ), ExtResource( 224 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 206 ), ExtResource( 208 ), ExtResource( 215 ), ExtResource( 196 ), ExtResource( 201 ), ExtResource( 394 ), ExtResource( 392 ), ExtResource( 210 ), ExtResource( 220 ), ExtResource( 369 ), ExtResource( 203 ), ExtResource( 226 ), ExtResource( 199 ), ExtResource( 221 ), ExtResource( 133 ), ExtResource( 322 ), ExtResource( 325 ), ExtResource( 332 ) ],
-"loop": false,
-"name": "Dino Rider_die",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 339 ), ExtResource( 504 ), ExtResource( 503 ), ExtResource( 364 ), ExtResource( 496 ), ExtResource( 359 ), ExtResource( 346 ), ExtResource( 340 ), ExtResource( 345 ), ExtResource( 336 ), ExtResource( 475 ), ExtResource( 341 ), ExtResource( 357 ), ExtResource( 352 ), ExtResource( 363 ), ExtResource( 333 ), ExtResource( 342 ), ExtResource( 349 ), ExtResource( 351 ), ExtResource( 335 ), ExtResource( 348 ), ExtResource( 344 ), ExtResource( 350 ), ExtResource( 489 ), ExtResource( 501 ), ExtResource( 474 ), ExtResource( 497 ), ExtResource( 488 ), ExtResource( 491 ), ExtResource( 492 ), ExtResource( 500 ), ExtResource( 483 ), ExtResource( 479 ), ExtResource( 498 ), ExtResource( 495 ), ExtResource( 499 ), ExtResource( 477 ), ExtResource( 478 ), ExtResource( 502 ), ExtResource( 476 ), ExtResource( 395 ), ExtResource( 368 ), ExtResource( 372 ) ],
-"loop": true,
-"name": "Slingshot Man_walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 602 ), ExtResource( 603 ), ExtResource( 605 ), ExtResource( 607 ), ExtResource( 631 ), ExtResource( 638 ), ExtResource( 599 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 598 ), ExtResource( 609 ), ExtResource( 597 ), ExtResource( 568 ), ExtResource( 578 ), ExtResource( 585 ), ExtResource( 586 ), ExtResource( 583 ), ExtResource( 601 ), ExtResource( 842 ), ExtResource( 844 ), ExtResource( 848 ), ExtResource( 820 ), ExtResource( 819 ), ExtResource( 850 ), ExtResource( 611 ), ExtResource( 625 ), ExtResource( 614 ), ExtResource( 633 ), ExtResource( 617 ), ExtResource( 640 ), ExtResource( 632 ), ExtResource( 624 ), ExtResource( 610 ), ExtResource( 637 ), ExtResource( 636 ), ExtResource( 613 ), ExtResource( 663 ), ExtResource( 655 ), ExtResource( 644 ), ExtResource( 660 ), ExtResource( 570 ), ExtResource( 589 ), ExtResource( 838 ), ExtResource( 730 ), ExtResource( 846 ), ExtResource( 717 ), ExtResource( 576 ), ExtResource( 830 ), ExtResource( 860 ), ExtResource( 866 ), ExtResource( 861 ), ExtResource( 823 ), ExtResource( 863 ), ExtResource( 855 ), ExtResource( 865 ), ExtResource( 862 ), ExtResource( 859 ), ExtResource( 856 ), ExtResource( 828 ), ExtResource( 829 ), ExtResource( 867 ), ExtResource( 853 ), ExtResource( 857 ), ExtResource( 851 ), ExtResource( 852 ), ExtResource( 858 ), ExtResource( 868 ), ExtResource( 864 ), ExtResource( 854 ), ExtResource( 814 ) ],
 "loop": false,
 "name": "Musketeer_die",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 734 ), ExtResource( 720 ), ExtResource( 726 ), ExtResource( 713 ), ExtResource( 712 ), ExtResource( 721 ), ExtResource( 708 ), ExtResource( 754 ), ExtResource( 723 ), ExtResource( 749 ), ExtResource( 709 ), ExtResource( 710 ), ExtResource( 735 ), ExtResource( 694 ), ExtResource( 711 ), ExtResource( 729 ), ExtResource( 686 ), ExtResource( 676 ), ExtResource( 732 ), ExtResource( 685 ), ExtResource( 698 ), ExtResource( 684 ), ExtResource( 689 ), ExtResource( 700 ), ExtResource( 715 ), ExtResource( 687 ), ExtResource( 703 ), ExtResource( 674 ), ExtResource( 693 ), ExtResource( 696 ), ExtResource( 701 ), ExtResource( 731 ), ExtResource( 704 ), ExtResource( 733 ), ExtResource( 705 ), ExtResource( 707 ), ExtResource( 718 ), ExtResource( 716 ), ExtResource( 791 ), ExtResource( 834 ), ExtResource( 805 ), ExtResource( 836 ), ExtResource( 801 ), ExtResource( 790 ), ExtResource( 794 ), ExtResource( 832 ), ExtResource( 813 ) ],
-"loop": true,
-"name": "Musketeer_walk",
+"frames": [ ExtResource( 233 ), ExtResource( 243 ), ExtResource( 270 ), ExtResource( 250 ), ExtResource( 249 ), ExtResource( 276 ), ExtResource( 241 ), ExtResource( 258 ), ExtResource( 278 ), ExtResource( 238 ), ExtResource( 265 ), ExtResource( 262 ), ExtResource( 269 ), ExtResource( 228 ), ExtResource( 246 ), ExtResource( 284 ), ExtResource( 275 ), ExtResource( 242 ), ExtResource( 231 ), ExtResource( 277 ), ExtResource( 230 ), ExtResource( 247 ), ExtResource( 248 ), ExtResource( 263 ), ExtResource( 239 ), ExtResource( 234 ), ExtResource( 235 ), ExtResource( 232 ), ExtResource( 274 ), ExtResource( 295 ), ExtResource( 301 ), ExtResource( 280 ), ExtResource( 292 ), ExtResource( 303 ), ExtResource( 279 ), ExtResource( 286 ), ExtResource( 294 ), ExtResource( 319 ), ExtResource( 257 ), ExtResource( 285 ), ExtResource( 271 ), ExtResource( 282 ), ExtResource( 267 ), ExtResource( 281 ), ExtResource( 259 ) ],
+"loop": false,
+"name": "Dino Rider_hit",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 87 ), ExtResource( 122 ), ExtResource( 136 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 143 ), ExtResource( 142 ), ExtResource( 7 ), ExtResource( 112 ), ExtResource( 14 ), ExtResource( 115 ), ExtResource( 4 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 30 ), ExtResource( 25 ), ExtResource( 29 ), ExtResource( 229 ), ExtResource( 26 ), ExtResource( 6 ), ExtResource( 23 ), ExtResource( 236 ), ExtResource( 227 ), ExtResource( 253 ), ExtResource( 27 ), ExtResource( 16 ), ExtResource( 32 ), ExtResource( 24 ), ExtResource( 5 ), ExtResource( 255 ), ExtResource( 244 ), ExtResource( 33 ), ExtResource( 245 ), ExtResource( 237 ), ExtResource( 8 ), ExtResource( 34 ), ExtResource( 3 ), ExtResource( 251 ), ExtResource( 252 ), ExtResource( 254 ), ExtResource( 17 ), ExtResource( 2 ), ExtResource( 63 ), ExtResource( 46 ), ExtResource( 50 ), ExtResource( 188 ), ExtResource( 144 ), ExtResource( 149 ) ],
-"loop": true,
-"name": "Dino Rider_idle",
+"frames": [ ExtResource( 36 ), ExtResource( 69 ), ExtResource( 54 ), ExtResource( 93 ), ExtResource( 92 ), ExtResource( 79 ), ExtResource( 83 ), ExtResource( 94 ), ExtResource( 67 ), ExtResource( 88 ), ExtResource( 73 ), ExtResource( 76 ), ExtResource( 84 ), ExtResource( 74 ), ExtResource( 100 ), ExtResource( 113 ), ExtResource( 78 ), ExtResource( 105 ), ExtResource( 96 ), ExtResource( 77 ), ExtResource( 103 ), ExtResource( 95 ), ExtResource( 104 ), ExtResource( 110 ) ],
+"loop": false,
+"name": "Club Man_die",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 272 ), ExtResource( 304 ), ExtResource( 288 ), ExtResource( 268 ), ExtResource( 256 ), ExtResource( 283 ), ExtResource( 300 ), ExtResource( 260 ), ExtResource( 287 ), ExtResource( 266 ), ExtResource( 305 ), ExtResource( 313 ), ExtResource( 273 ), ExtResource( 261 ), ExtResource( 264 ), ExtResource( 299 ), ExtResource( 297 ), ExtResource( 306 ), ExtResource( 296 ), ExtResource( 320 ), ExtResource( 307 ), ExtResource( 310 ), ExtResource( 311 ), ExtResource( 309 ), ExtResource( 302 ), ExtResource( 315 ), ExtResource( 312 ), ExtResource( 291 ), ExtResource( 326 ), ExtResource( 317 ), ExtResource( 318 ), ExtResource( 308 ), ExtResource( 321 ), ExtResource( 290 ), ExtResource( 316 ), ExtResource( 298 ), ExtResource( 293 ), ExtResource( 289 ), ExtResource( 330 ), ExtResource( 314 ) ],
-"loop": true,
-"name": "Dino Rider_walk",
+"frames": [ ExtResource( 809 ), ExtResource( 816 ), ExtResource( 795 ), ExtResource( 831 ), ExtResource( 789 ), ExtResource( 797 ), ExtResource( 798 ), ExtResource( 845 ), ExtResource( 799 ), ExtResource( 849 ), ExtResource( 847 ), ExtResource( 837 ), ExtResource( 839 ), ExtResource( 825 ), ExtResource( 833 ), ExtResource( 843 ), ExtResource( 634 ), ExtResource( 629 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 635 ), ExtResource( 619 ), ExtResource( 641 ), ExtResource( 639 ), ExtResource( 627 ), ExtResource( 621 ), ExtResource( 618 ), ExtResource( 612 ), ExtResource( 620 ), ExtResource( 626 ), ExtResource( 628 ), ExtResource( 630 ), ExtResource( 596 ), ExtResource( 582 ), ExtResource( 581 ), ExtResource( 573 ), ExtResource( 579 ), ExtResource( 594 ), ExtResource( 588 ), ExtResource( 591 ), ExtResource( 575 ), ExtResource( 592 ), ExtResource( 572 ), ExtResource( 574 ), ExtResource( 567 ), ExtResource( 595 ), ExtResource( 587 ), ExtResource( 580 ) ],
+"loop": false,
+"name": "Musketeer_walk&shoot",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 458 ), ExtResource( 443 ), ExtResource( 402 ), ExtResource( 445 ), ExtResource( 441 ), ExtResource( 411 ), ExtResource( 415 ), ExtResource( 460 ), ExtResource( 412 ), ExtResource( 437 ), ExtResource( 459 ), ExtResource( 429 ), ExtResource( 433 ), ExtResource( 436 ), ExtResource( 400 ), ExtResource( 457 ), ExtResource( 410 ), ExtResource( 430 ), ExtResource( 403 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 401 ), ExtResource( 439 ), ExtResource( 449 ), ExtResource( 464 ), ExtResource( 466 ), ExtResource( 465 ), ExtResource( 451 ), ExtResource( 450 ), ExtResource( 432 ), ExtResource( 453 ), ExtResource( 454 ), ExtResource( 468 ), ExtResource( 455 ), ExtResource( 448 ), ExtResource( 469 ), ExtResource( 456 ), ExtResource( 461 ), ExtResource( 463 ), ExtResource( 467 ) ],
+"loop": false,
+"name": "Slingshot Man_hit",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 528 ), ExtResource( 531 ), ExtResource( 490 ), ExtResource( 509 ), ExtResource( 487 ), ExtResource( 537 ), ExtResource( 505 ), ExtResource( 523 ), ExtResource( 481 ), ExtResource( 530 ), ExtResource( 482 ), ExtResource( 527 ), ExtResource( 484 ), ExtResource( 485 ), ExtResource( 514 ), ExtResource( 529 ), ExtResource( 506 ), ExtResource( 508 ), ExtResource( 512 ), ExtResource( 513 ), ExtResource( 524 ), ExtResource( 517 ), ExtResource( 544 ), ExtResource( 516 ), ExtResource( 534 ), ExtResource( 552 ), ExtResource( 515 ), ExtResource( 532 ), ExtResource( 520 ), ExtResource( 522 ), ExtResource( 533 ), ExtResource( 555 ), ExtResource( 559 ), ExtResource( 510 ), ExtResource( 518 ), ExtResource( 525 ), ExtResource( 511 ), ExtResource( 507 ), ExtResource( 535 ), ExtResource( 526 ), ExtResource( 519 ), ExtResource( 521 ), ExtResource( 536 ) ],
@@ -926,9 +906,29 @@ animations = [ {
 "name": "Slingshot Man_walk&shoot",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 809 ), ExtResource( 816 ), ExtResource( 795 ), ExtResource( 831 ), ExtResource( 789 ), ExtResource( 797 ), ExtResource( 798 ), ExtResource( 845 ), ExtResource( 799 ), ExtResource( 849 ), ExtResource( 847 ), ExtResource( 837 ), ExtResource( 839 ), ExtResource( 825 ), ExtResource( 833 ), ExtResource( 843 ), ExtResource( 634 ), ExtResource( 629 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 635 ), ExtResource( 619 ), ExtResource( 641 ), ExtResource( 639 ), ExtResource( 627 ), ExtResource( 621 ), ExtResource( 618 ), ExtResource( 612 ), ExtResource( 620 ), ExtResource( 626 ), ExtResource( 628 ), ExtResource( 630 ), ExtResource( 596 ), ExtResource( 582 ), ExtResource( 581 ), ExtResource( 573 ), ExtResource( 579 ), ExtResource( 594 ), ExtResource( 588 ), ExtResource( 591 ), ExtResource( 575 ), ExtResource( 592 ), ExtResource( 572 ), ExtResource( 574 ), ExtResource( 567 ), ExtResource( 595 ), ExtResource( 587 ), ExtResource( 580 ) ],
+"frames": [ ExtResource( 493 ), ExtResource( 480 ), ExtResource( 384 ), ExtResource( 374 ), ExtResource( 396 ), ExtResource( 375 ), ExtResource( 373 ), ExtResource( 376 ), ExtResource( 387 ), ExtResource( 414 ), ExtResource( 397 ), ExtResource( 416 ), ExtResource( 367 ), ExtResource( 425 ), ExtResource( 422 ), ExtResource( 366 ), ExtResource( 423 ), ExtResource( 378 ), ExtResource( 405 ), ExtResource( 420 ), ExtResource( 381 ), ExtResource( 390 ), ExtResource( 408 ), ExtResource( 424 ), ExtResource( 426 ), ExtResource( 419 ), ExtResource( 427 ), ExtResource( 380 ), ExtResource( 389 ), ExtResource( 398 ), ExtResource( 382 ), ExtResource( 421 ), ExtResource( 391 ), ExtResource( 404 ), ExtResource( 379 ), ExtResource( 413 ), ExtResource( 428 ), ExtResource( 365 ), ExtResource( 371 ), ExtResource( 386 ), ExtResource( 406 ), ExtResource( 440 ), ExtResource( 399 ), ExtResource( 442 ), ExtResource( 407 ), ExtResource( 435 ), ExtResource( 444 ), ExtResource( 438 ), ExtResource( 409 ), ExtResource( 434 ) ],
+"loop": true,
+"name": "Slingshot Man_idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 339 ), ExtResource( 504 ), ExtResource( 503 ), ExtResource( 364 ), ExtResource( 496 ), ExtResource( 359 ), ExtResource( 346 ), ExtResource( 340 ), ExtResource( 345 ), ExtResource( 336 ), ExtResource( 475 ), ExtResource( 341 ), ExtResource( 357 ), ExtResource( 352 ), ExtResource( 363 ), ExtResource( 333 ), ExtResource( 342 ), ExtResource( 349 ), ExtResource( 351 ), ExtResource( 335 ), ExtResource( 348 ), ExtResource( 344 ), ExtResource( 350 ), ExtResource( 489 ), ExtResource( 501 ), ExtResource( 474 ), ExtResource( 497 ), ExtResource( 488 ), ExtResource( 491 ), ExtResource( 492 ), ExtResource( 500 ), ExtResource( 483 ), ExtResource( 479 ), ExtResource( 498 ), ExtResource( 495 ), ExtResource( 499 ), ExtResource( 477 ), ExtResource( 478 ), ExtResource( 502 ), ExtResource( 476 ), ExtResource( 395 ), ExtResource( 368 ), ExtResource( 372 ) ],
+"loop": true,
+"name": "Slingshot Man_walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 328 ), ExtResource( 225 ), ExtResource( 329 ), ExtResource( 222 ), ExtResource( 214 ), ExtResource( 209 ), ExtResource( 200 ), ExtResource( 218 ), ExtResource( 331 ), ExtResource( 324 ), ExtResource( 217 ), ExtResource( 205 ), ExtResource( 211 ), ExtResource( 212 ), ExtResource( 327 ), ExtResource( 323 ), ExtResource( 213 ), ExtResource( 223 ), ExtResource( 383 ), ExtResource( 207 ), ExtResource( 377 ), ExtResource( 385 ), ExtResource( 370 ), ExtResource( 202 ), ExtResource( 204 ), ExtResource( 219 ), ExtResource( 216 ), ExtResource( 393 ), ExtResource( 388 ), ExtResource( 224 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 206 ), ExtResource( 208 ), ExtResource( 215 ), ExtResource( 196 ), ExtResource( 201 ), ExtResource( 394 ), ExtResource( 392 ), ExtResource( 210 ), ExtResource( 220 ), ExtResource( 369 ), ExtResource( 203 ), ExtResource( 226 ), ExtResource( 199 ), ExtResource( 221 ), ExtResource( 133 ), ExtResource( 322 ), ExtResource( 325 ), ExtResource( 332 ) ],
 "loop": false,
-"name": "Musketeer_walk&shoot",
+"name": "Dino Rider_die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 87 ), ExtResource( 122 ), ExtResource( 136 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 143 ), ExtResource( 142 ), ExtResource( 7 ), ExtResource( 112 ), ExtResource( 14 ), ExtResource( 115 ), ExtResource( 4 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 30 ), ExtResource( 25 ), ExtResource( 29 ), ExtResource( 229 ), ExtResource( 26 ), ExtResource( 6 ), ExtResource( 23 ), ExtResource( 236 ), ExtResource( 227 ), ExtResource( 253 ), ExtResource( 27 ), ExtResource( 16 ), ExtResource( 32 ), ExtResource( 24 ), ExtResource( 5 ), ExtResource( 255 ), ExtResource( 244 ), ExtResource( 33 ), ExtResource( 245 ), ExtResource( 237 ), ExtResource( 8 ), ExtResource( 34 ), ExtResource( 3 ), ExtResource( 251 ), ExtResource( 252 ), ExtResource( 254 ), ExtResource( 17 ), ExtResource( 2 ), ExtResource( 63 ), ExtResource( 46 ), ExtResource( 50 ), ExtResource( 188 ), ExtResource( 144 ), ExtResource( 149 ) ],
+"loop": true,
+"name": "Dino Rider_idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 58 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 45 ), ExtResource( 55 ), ExtResource( 66 ), ExtResource( 57 ), ExtResource( 47 ), ExtResource( 62 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 65 ), ExtResource( 37 ), ExtResource( 48 ), ExtResource( 56 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 43 ), ExtResource( 59 ), ExtResource( 49 ), ExtResource( 68 ), ExtResource( 70 ), ExtResource( 39 ), ExtResource( 86 ), ExtResource( 89 ), ExtResource( 81 ), ExtResource( 85 ), ExtResource( 52 ), ExtResource( 82 ), ExtResource( 72 ), ExtResource( 35 ), ExtResource( 80 ), ExtResource( 91 ), ExtResource( 98 ), ExtResource( 90 ), ExtResource( 38 ), ExtResource( 53 ), ExtResource( 71 ) ],
+"loop": false,
+"name": "Club Man_hit",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 647 ), ExtResource( 669 ), ExtResource( 652 ), ExtResource( 671 ), ExtResource( 648 ), ExtResource( 654 ), ExtResource( 657 ), ExtResource( 643 ), ExtResource( 691 ), ExtResource( 679 ), ExtResource( 656 ), ExtResource( 683 ), ExtResource( 658 ), ExtResource( 682 ), ExtResource( 697 ), ExtResource( 675 ), ExtResource( 692 ), ExtResource( 690 ), ExtResource( 688 ), ExtResource( 699 ), ExtResource( 702 ), ExtResource( 681 ), ExtResource( 677 ), ExtResource( 695 ), ExtResource( 678 ), ExtResource( 680 ), ExtResource( 826 ), ExtResource( 835 ), ExtResource( 821 ), ExtResource( 840 ), ExtResource( 841 ), ExtResource( 827 ), ExtResource( 824 ), ExtResource( 822 ), ExtResource( 659 ), ExtResource( 662 ), ExtResource( 672 ), ExtResource( 666 ), ExtResource( 667 ), ExtResource( 642 ), ExtResource( 661 ), ExtResource( 645 ), ExtResource( 608 ), ExtResource( 606 ), ExtResource( 604 ), ExtResource( 600 ) ],
@@ -941,28 +941,28 @@ animations = [ {
 "name": "Musketeer_idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 158 ), ExtResource( 152 ), ExtResource( 180 ), ExtResource( 145 ), ExtResource( 151 ), ExtResource( 147 ), ExtResource( 185 ), ExtResource( 173 ), ExtResource( 156 ), ExtResource( 153 ), ExtResource( 148 ), ExtResource( 154 ), ExtResource( 175 ), ExtResource( 155 ), ExtResource( 159 ), ExtResource( 170 ), ExtResource( 166 ), ExtResource( 174 ), ExtResource( 161 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 193 ), ExtResource( 186 ), ExtResource( 195 ), ExtResource( 157 ), ExtResource( 167 ), ExtResource( 183 ), ExtResource( 194 ), ExtResource( 191 ), ExtResource( 169 ), ExtResource( 1 ), ExtResource( 192 ), ExtResource( 168 ), ExtResource( 177 ), ExtResource( 164 ), ExtResource( 160 ), ExtResource( 181 ), ExtResource( 171 ), ExtResource( 162 ), ExtResource( 165 ), ExtResource( 184 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 172 ), ExtResource( 163 ), ExtResource( 176 ), ExtResource( 182 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 187 ) ],
+"loop": true,
+"name": "Club Man_idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 272 ), ExtResource( 304 ), ExtResource( 288 ), ExtResource( 268 ), ExtResource( 256 ), ExtResource( 283 ), ExtResource( 300 ), ExtResource( 260 ), ExtResource( 287 ), ExtResource( 266 ), ExtResource( 305 ), ExtResource( 313 ), ExtResource( 273 ), ExtResource( 261 ), ExtResource( 264 ), ExtResource( 299 ), ExtResource( 297 ), ExtResource( 306 ), ExtResource( 296 ), ExtResource( 320 ), ExtResource( 307 ), ExtResource( 310 ), ExtResource( 311 ), ExtResource( 309 ), ExtResource( 302 ), ExtResource( 315 ), ExtResource( 312 ), ExtResource( 291 ), ExtResource( 326 ), ExtResource( 317 ), ExtResource( 318 ), ExtResource( 308 ), ExtResource( 321 ), ExtResource( 290 ), ExtResource( 316 ), ExtResource( 298 ), ExtResource( 293 ), ExtResource( 289 ), ExtResource( 330 ), ExtResource( 314 ) ],
+"loop": true,
+"name": "Dino Rider_walk",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 538 ), ExtResource( 543 ), ExtResource( 550 ), ExtResource( 545 ), ExtResource( 541 ), ExtResource( 557 ), ExtResource( 240 ), ExtResource( 560 ), ExtResource( 547 ), ExtResource( 564 ), ExtResource( 562 ), ExtResource( 539 ), ExtResource( 542 ), ExtResource( 546 ), ExtResource( 540 ), ExtResource( 551 ), ExtResource( 553 ), ExtResource( 584 ), ExtResource( 561 ), ExtResource( 571 ), ExtResource( 577 ), ExtResource( 563 ), ExtResource( 565 ), ExtResource( 548 ), ExtResource( 569 ), ExtResource( 593 ), ExtResource( 566 ), ExtResource( 549 ), ExtResource( 558 ), ExtResource( 556 ), ExtResource( 554 ), ExtResource( 590 ) ],
 "loop": false,
 "name": "Slingshot Man_stand&shoot",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 233 ), ExtResource( 243 ), ExtResource( 270 ), ExtResource( 250 ), ExtResource( 249 ), ExtResource( 276 ), ExtResource( 241 ), ExtResource( 258 ), ExtResource( 278 ), ExtResource( 238 ), ExtResource( 265 ), ExtResource( 262 ), ExtResource( 269 ), ExtResource( 228 ), ExtResource( 246 ), ExtResource( 284 ), ExtResource( 275 ), ExtResource( 242 ), ExtResource( 231 ), ExtResource( 277 ), ExtResource( 230 ), ExtResource( 247 ), ExtResource( 248 ), ExtResource( 263 ), ExtResource( 239 ), ExtResource( 234 ), ExtResource( 235 ), ExtResource( 232 ), ExtResource( 274 ), ExtResource( 295 ), ExtResource( 301 ), ExtResource( 280 ), ExtResource( 292 ), ExtResource( 303 ), ExtResource( 279 ), ExtResource( 286 ), ExtResource( 294 ), ExtResource( 319 ), ExtResource( 257 ), ExtResource( 285 ), ExtResource( 271 ), ExtResource( 282 ), ExtResource( 267 ), ExtResource( 281 ), ExtResource( 259 ) ],
-"loop": false,
-"name": "Dino Rider_hit",
+"frames": [ ExtResource( 734 ), ExtResource( 720 ), ExtResource( 726 ), ExtResource( 713 ), ExtResource( 712 ), ExtResource( 721 ), ExtResource( 708 ), ExtResource( 754 ), ExtResource( 723 ), ExtResource( 749 ), ExtResource( 709 ), ExtResource( 710 ), ExtResource( 735 ), ExtResource( 694 ), ExtResource( 711 ), ExtResource( 729 ), ExtResource( 686 ), ExtResource( 676 ), ExtResource( 732 ), ExtResource( 685 ), ExtResource( 698 ), ExtResource( 684 ), ExtResource( 689 ), ExtResource( 700 ), ExtResource( 715 ), ExtResource( 687 ), ExtResource( 703 ), ExtResource( 674 ), ExtResource( 693 ), ExtResource( 696 ), ExtResource( 701 ), ExtResource( 731 ), ExtResource( 704 ), ExtResource( 733 ), ExtResource( 705 ), ExtResource( 707 ), ExtResource( 718 ), ExtResource( 716 ), ExtResource( 791 ), ExtResource( 834 ), ExtResource( 805 ), ExtResource( 836 ), ExtResource( 801 ), ExtResource( 790 ), ExtResource( 794 ), ExtResource( 832 ), ExtResource( 813 ) ],
+"loop": true,
+"name": "Musketeer_walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 458 ), ExtResource( 443 ), ExtResource( 402 ), ExtResource( 445 ), ExtResource( 441 ), ExtResource( 411 ), ExtResource( 415 ), ExtResource( 460 ), ExtResource( 412 ), ExtResource( 437 ), ExtResource( 459 ), ExtResource( 429 ), ExtResource( 433 ), ExtResource( 436 ), ExtResource( 400 ), ExtResource( 457 ), ExtResource( 410 ), ExtResource( 430 ), ExtResource( 403 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 401 ), ExtResource( 439 ), ExtResource( 449 ), ExtResource( 464 ), ExtResource( 466 ), ExtResource( 465 ), ExtResource( 451 ), ExtResource( 450 ), ExtResource( 432 ), ExtResource( 453 ), ExtResource( 454 ), ExtResource( 468 ), ExtResource( 455 ), ExtResource( 448 ), ExtResource( 469 ), ExtResource( 456 ), ExtResource( 461 ), ExtResource( 463 ), ExtResource( 467 ) ],
+"frames": [ ExtResource( 338 ), ExtResource( 337 ), ExtResource( 462 ), ExtResource( 470 ), ExtResource( 431 ), ExtResource( 452 ), ExtResource( 447 ), ExtResource( 471 ), ExtResource( 472 ), ExtResource( 473 ), ExtResource( 446 ), ExtResource( 358 ), ExtResource( 354 ), ExtResource( 362 ), ExtResource( 360 ), ExtResource( 334 ), ExtResource( 343 ), ExtResource( 494 ), ExtResource( 347 ), ExtResource( 353 ), ExtResource( 361 ), ExtResource( 355 ), ExtResource( 486 ), ExtResource( 356 ) ],
 "loop": false,
-"name": "Slingshot Man_hit",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 36 ), ExtResource( 69 ), ExtResource( 54 ), ExtResource( 93 ), ExtResource( 92 ), ExtResource( 79 ), ExtResource( 83 ), ExtResource( 94 ), ExtResource( 67 ), ExtResource( 88 ), ExtResource( 73 ), ExtResource( 76 ), ExtResource( 84 ), ExtResource( 74 ), ExtResource( 100 ), ExtResource( 113 ), ExtResource( 78 ), ExtResource( 105 ), ExtResource( 96 ), ExtResource( 77 ), ExtResource( 103 ), ExtResource( 95 ), ExtResource( 104 ), ExtResource( 110 ) ],
-"loop": false,
-"name": "Club Man_die",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 58 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 45 ), ExtResource( 55 ), ExtResource( 66 ), ExtResource( 57 ), ExtResource( 47 ), ExtResource( 62 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 65 ), ExtResource( 37 ), ExtResource( 48 ), ExtResource( 56 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 43 ), ExtResource( 59 ), ExtResource( 49 ), ExtResource( 68 ), ExtResource( 70 ), ExtResource( 39 ), ExtResource( 86 ), ExtResource( 89 ), ExtResource( 81 ), ExtResource( 85 ), ExtResource( 52 ), ExtResource( 82 ), ExtResource( 72 ), ExtResource( 35 ), ExtResource( 80 ), ExtResource( 91 ), ExtResource( 98 ), ExtResource( 90 ), ExtResource( 38 ), ExtResource( 53 ), ExtResource( 71 ) ],
-"loop": false,
-"name": "Club Man_hit",
+"name": "Slingshot Man_die",
 "speed": 5.0
 } ]
