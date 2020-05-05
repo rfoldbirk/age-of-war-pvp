@@ -1,18 +1,23 @@
 extends "res://Scripts/ws.gd"
 
 var state = "pause"
-var DIR = 2
-var MONEY = 150
+var DIR = 2 # denne klients retning... bliver alligevel overskrevet
+var MONEY = 150 # klientens penge
 
 var MONEY_GIVING_TIMER = 0
 
+var Queue = []
+
+# to labels
 onready var countdown = get_node("/root/Game/Control/Countdown")
 onready var moneylbl = get_node("/root/Game/Control/Money")
 
-func setup(s, d):
+func setup(s, d): # bliver kaldt fra ws.gd
 	state = s
 	DIR = d
 
+
+# et stort objekt med alle karakterene og deres egenskaber
 const Characters = {
 	"base": {
 		"health": 500
@@ -23,10 +28,6 @@ const Characters = {
 			"hit": Vector2(49.361, -37.567),
 			"walk": Vector2(23.057, 0),
 			"die": Vector2(-48.414, 231.029),
-			"collisionBox": {
-				"size": Vector2(0, 0),
-				"offset": Vector2(0, 0)
-			}
 		},
 		"price": 25,
 		"hitframe": 20,
@@ -47,10 +48,6 @@ const Characters = {
 			"die": Vector2(-57.071, 300.882),
 			"walk&shoot": Vector2(62, -4),
 			"stand&shoot": Vector2(81, -2),
-			"collisionBox": {
-				"size": Vector2(0, 0),
-				"offset": Vector2(0, 0)
-			}
 		},
 		"price": 50,
 		"hitframe": 20,
@@ -71,10 +68,6 @@ const Characters = {
 			"hit": Vector2(88.292, -68.761),
 			"walk": Vector2(36.369, -68.761),
 			"die": Vector2(-108.957, -58.535),
-			"collisionBox": {
-				"size": Vector2(0, 0),
-				"offset": Vector2(0, 0)
-			}
 		},
 		"price": 100,
 		"hitframe": 20,
@@ -92,36 +85,33 @@ const Characters = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(OS.get_system_time_msecs())
-
+	# igennem spillet kloner vi faktisk bare en forudlavet karakter
+	# vi gør ham usynlig og slukker hans kollisionbox så de andre karakterer ikke løber ind i en usynlig mand.
 	get_node("Characters").visible = false
 	get_node("Characters").get_node("CollisionShape2D").disabled = true
 	get_node("Characters/AnimatedSprite").position = Vector2.ZERO
 
+	# vi laver også en klon af den venstre base og placere den i højre side af banen.
 	var second_base = get_node("base").duplicate()
 	second_base.position.x = 1000
-	add_child(second_base)
+	add_child(second_base) # tilføjer den til objektet Game
 
 	get_node("base").init("base", 1, Characters["base"]["health"])
 	second_base.init("base", -1, Characters["base"]["health"])
 
-	update_money(0)
+	update_money(0) # en funktion som tilføjer og derefter opdaterer skriften
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(_delta):
 	if state != "game":
 		return
 
-	var client_btn = get_node_or_null("/root/Game/Control/second_client")
-	if client_btn != null:
-		client_btn.queue_free()
-
-	MONEY_GIVING_TIMER += _delta
+	MONEY_GIVING_TIMER += _delta # man får en månt hvert sekund
 
 	if MONEY_GIVING_TIMER >= 1:
 		MONEY_GIVING_TIMER = 0
-		if MONEY > 150:
+		if MONEY > 150: # til gengæld mister man penge hvis man er over 150.
 			update_money(-1)
 		elif MONEY < 150:
 			update_money(1)
@@ -133,45 +123,37 @@ func _process(_delta):
 	
 	var time = OS.get_system_time_msecs()
 
+	# vi sætter en tid i fremtiden hvor karakterene må spawne.
+	# derefter tjekker vi konstant om det er tid til at spawne dem
+
 	if time >= item.spawnTime:
-		print('Spawning: ', item.name)
-		Queue.pop_front()
+		Queue.pop_front() # fjerner den fra køen
 		spawnCharacter(item.name, item.direction)
-		countdown.text = ""
+		countdown.text = "" # fjerner nedtællingen
 	else:
-		var timeLeft = item.spawnTime - time
-		if item.direction == DIR:
-			countdown.text = str(stepify(timeLeft/1000, 1)+1)
+		# hvis der er mere tid tilbage regner vi ud hvor meget tid der er tilbage
+		if item.direction == DIR: # hvis det er en af vores egne mænd:
+			var timeLeft = item.spawnTime - time
+			countdown.text = str(stepify(timeLeft/1000, 1)+1) # runder vi ned op plusser med en, så vi kan se hvor mange sekunder der er tilbage.
 	
 
-func canSpawn(direction):
-	var children = get_children()
-	var base
 
-	for i in children:
-		if i.get("direction") == direction and i.get("Type") == "base":
-			base = i
-
-	if base == null:
-		return false
-
-	var raycast = base.get_node("RayCast2D")
-	if !raycast.is_colliding():
-		return true
-
-	return false
-
-
-var Queue = []
 
 func update_money(amount):
+	# hvis slutbeløbet ryger under nul, er transaktionen ikke tilladet
+
 	if MONEY + amount < 0:
 		return false
+
+	# ellers er det fint
 	MONEY += amount
 	moneylbl.text = str(MONEY, "$")
 	return true
 
+
 func get_total_spawntime(d):
+	# bruges til at beregne hvor meget ekstra spawntid der skal være for et bestemt hold
+	# den tjekker de karakterer, som allerede er i køen og hvis retningen er den rigtige bliver de tilføjet i regnestykket
 	var t = 0
 	for i in Queue:
 		if d == i.direction:
@@ -184,6 +166,8 @@ func requestCharacter(name="Club Man", direction=1):
 	if !update_money(-Characters[name]["price"]):
 		return
 
+	# serveren bliver altså kun underrettet hvis der er penge nok
+
 	_client.get_peer(1).put_packet(JSON.print({
 		"event":"requestCharacter",
 		"name": name,
@@ -192,7 +176,8 @@ func requestCharacter(name="Club Man", direction=1):
 	}).to_utf8())
 
 
-func spawnCharacter(name, direction, x=0):
+# funktionen bliver kaldt når der kommer signal fra serveren.
+func spawnCharacter(name, direction, x=0): # x blev udlukkende brugt til debugging
 	var Man = get_node("Characters").duplicate()
 	if direction == 1:
 		Man.position.x = -2523.308 + (x*direction)
@@ -200,4 +185,6 @@ func spawnCharacter(name, direction, x=0):
 		Man.position.x = 476.563 + (x*direction)
 
 	add_child(Man)
+
+	# kalder karakterens init funktion så den kan begynde at kæmpe
 	Man.init(name, direction, Characters[name]["health"], Characters[name]["offsets"], Characters[name]["hitframe"])
